@@ -73,17 +73,54 @@
                     </svg>
                 </button>
 
+                <div class="modal-container">
+                    <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+                    <div class="modal-input">
 
-                <form>
-                    <label>
-                        имя:
-                    </label>
+                        <form class="from js-speaker-form" name="new-client" autocomplete="on" novalidate>
 
+                            <div class="container-information">
+                                <label for="name">
+                                <p class="modal-text">Имя</p>
+                                    <input class="modal-input-area" type="text" name="name" id="name">
+                                </label>
+                            </div>
 
+                            <div class="container-information">
+                                <label for="tel">
+                                    <p class="modal-text">Телефон</p>
+                                    <input class="modal-input-area" type="tel" name="telefon" id="tel">
+                                </label>
+                            </div>
 
+                            <div class="container-information">
+                                <label for="mail">
+                                    <p class="modal-text">Почта</p>
+                                    <input class="modal-input-area" type="email" name="mail" id="mail" >
+                                    
+                                </label>
+                            </div>
 
-                </form>
+                            <div class="container-information">
+                                <label>
+                                    <p class="modal-text">Комментарий</p>
+                                    <textarea class="modal-input-area" name="feedback" rows="5"
+                                    placeholder="Введите текст"></textarea>
+                                </label>
+                            </div>
 
+                            <div class="check-policy">
+                                <input class="check-policy-check" type="checkbox" name="policy" id="polici">
+                                <label for="policy"> Соглашаюсь с рассылкой и принимаю
+                                    <a href="">Условия договора</a> 
+                                </label>
+                            </div>
+
+                            <button type="submit" class="modal-btn-submit">Оставить заявку</button>
+                        </form>
+                    </div>
+
+                </div>
             </div>
         </div>
 
@@ -340,7 +377,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="connect-ftr ">
+            <div class="connect-ftr">
                 <h3 class="connect-title ">ПРИСОЕДИНЯЙТЕСЬ</h3>
                 <ul class="connect-ftr-ul ">
                     <li class="connect-ftr-li ">
@@ -360,8 +397,18 @@
                             <use href="./photo/icon.svg#icon-linkedin "></use></svg></a>
                     </li>
                 </ul>
-
             </div>
+            <div class="distribution-ftr">
+                <h3 class="connect-title">ПОДПИШИСЬ НА РАССЫЛКУ</h3>
+                <form action="distribution">
+                    <input class="distribution-inpet" type="mail" name="mail" id="distribution" placeholder="E-mail">
+                </form>
+                <button class="footer-btn"> <span class="distribution-text-btn" >ПОДПИСАТЬСЯ</span>
+                <svg class="distribution-svg" width="24px " height="24px ">
+                    <use href="./photo/icon.svg#icon-send "></use></svg>
+                    </button>
+            </div>
+
         </div>
     </footer>
 
@@ -388,6 +435,25 @@
         }
     </script>
 
+
+
+    <!--  scropt for request  -->
+
+    <script>
+        (() => {
+            document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log(`${name}: ${value}`),
+                    );
+
+                    e.currentTarget.reset();
+                });
+        })();
+    </script>
 
 </body>
 
