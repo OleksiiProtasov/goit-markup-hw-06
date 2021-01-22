@@ -9,7 +9,7 @@
     --primary-width: 1200px;
     --color-social-link: #AFB1B8;
     --trans-duration: 250ms;
-    --trasn-time-funk: cubic-bezier(.21, .43, .46, .78);
+    --trasn-time-funk: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 img {
