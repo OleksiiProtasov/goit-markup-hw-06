@@ -283,7 +283,6 @@ body {
     top: 50%;
     left: 50%;
     width: 528px;
-    height: 581px;
     background-color: var(--primary-white-color);
     transform: translate(-50%, -50%);
 }
@@ -312,11 +311,12 @@ body {
     fill: #2196F3;
 }
 
+.form {
+    display: block;
+}
+
 .modal-container {
     margin: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .modal-title {
@@ -331,9 +331,23 @@ body {
     color: #212121;
 }
 
-.modal-text {
-    margin: 0;
-    padding-bottom: 4px;
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.container-svg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    margin-bottom: 4px;
     font-family: Roboto;
     font-weight: normal;
     font-size: 12px;
@@ -342,32 +356,81 @@ body {
     color: #757575;
 }
 
-.modal-input-area {
-    width: 100%;
+.modal-input-info {
+    padding-left: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    line-height: 12px;
 }
 
-.modal-input-area:hover {
+.modal-input-info:hover,
+.modal-input-info:focus {
     border-color: var(--accent-color);
-    cursor: pointer;
+    cursor: text;
 }
 
+.modal-input-info:hover+.modal-svg,
+.modal-input-info:focus+.modal-svg {
+    fill: var(--accent-color);
+}
 
-/*.container-information{
-    
-}*/
+.modal-svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: #212121;
+}
 
-.container-information:not(:last-child) {
-    margin-bottom: 10px;
+.modal-input-area {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    padding-left: 5px;
+    border-radius: 4px;
+}
+
+.modal-input-area:focus,
+.modal-input-area:hover {
+    outline: none;
+    border-color: var(--accent-color);
 }
 
 .check-policy {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 20px 0 30px;
 }
 
-.check-policy-check {
-    margin-right: 7px;
+
+/*.check-policy-input:checked~.policy-check-box,
+.check-policy-input:checked~.modal-svg-check {
+    
+    fill: var(--primary-white-color);
+}*/
+
+.modal-svg-check {
+    fill: var(--primary-white-color);
+}
+
+.policy-check-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 16px;
+    height: 15px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.modal-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-btn-submit {
@@ -388,8 +451,8 @@ body {
     letter-spacing: 0.06em;
 }
 
-.modal-btn-submit:hover,
-.modal-btn-submit:focus {
+.modal-btn-submit :hover,
+.modal-btn-submit :focus {
     background-color: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -686,10 +749,6 @@ footer .item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.connect-ftr {
-    margin-right: 93px;
-}
-
 .connect-ftr-ul {
     text-align: center;
 }
@@ -772,13 +831,16 @@ footer .item:not(:last-child) {
 
 /*  destribution    */
 
-.distribution-ftr {}
+.distribution-ftr {
+    margin-left: auto;
+}
 
 .discription-form {
     display: inline-flex;
 }
 
 .distribution-input {
+    padding-left: 16px;
     width: 360px;
     height: 50px;
     box-sizing: border-box;
@@ -790,9 +852,6 @@ footer .item:not(:last-child) {
 }
 
 .footer-btn {
-    display: flex;
-    align-items: center;
-    padding: 0;
     width: 200px;
     height: 50px;
     background-color: var(--accent-color);
@@ -804,14 +863,15 @@ footer .item:not(:last-child) {
 }
 
 .distribution-svg {
-    padding: 0;
+    margin-left: 10px;
 }
 
 .footer-btn:hover,
-.footer-btn:focus {}
+.footer-btn:focus {
+    cursor: pointer;
+}
 
 .distribution-text-btn {
-    padding: 10px 10px 10px 29px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -836,6 +896,12 @@ footer .item:not(:last-child) {
     margin-bottom: 50px;
 }
 
+.footer-name-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .portf-btn:focus,
 .portf-btn:hover {
     cursor: pointer;
@@ -845,7 +911,6 @@ footer .item:not(:last-child) {
 }
 
 .portf-btn {
-    padding: 6px 22px;
     color: #212121;
     background-color: #F5F4FA;
     font-family: var(--primary-font-famaly);
@@ -853,7 +918,6 @@ footer .item:not(:last-child) {
     font-weight: 500;
     line-height: 26px;
     letter-spacing: 0.03em;
-    text-align: center;
     outline: transparent;
     border: #F5F4FA;
     border-radius: 4px;

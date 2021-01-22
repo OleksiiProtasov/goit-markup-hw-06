@@ -77,46 +77,67 @@
                     <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
                     <div class="modal-input">
 
-                        <form class="from js-speaker-form" name="new-client" autocomplete="on" novalidate>
+                        <form class="from js-speaker-form" name="new-client" autocomplete="off" novalidate>
 
-                            <div class="container-information">
+                            <div class="form-field">
                                 <label for="name">
-                                <p class="modal-text">Имя</p>
-                                    <input class="modal-input-area" type="text" name="name" id="name">
-                                </label>
+                                    <span>Имя</span></label>
+                                <div class="container-svg">
+                                    <input class="modal-input-info" type="text" name="name" id="name">
+                                    <svg class="modal-svg" width="12" height="12">
+                                                <use href="./photo/icon.svg#icon-human"></use>
+                                        </svg>
+                                </div>
                             </div>
 
-                            <div class="container-information">
+                            <div class="form-field">
                                 <label for="tel">
-                                    <p class="modal-text">Телефон</p>
-                                    <input class="modal-input-area" type="tel" name="telefon" id="tel">
-                                </label>
+                                    <span>Телефон</span> </label>
+                                <div class="container-svg">
+                                    <input class="modal-input-info" type="tel" name="telefon" id="tel">
+                                    <svg class="modal-svg" width="12" height="12">
+                                                <use href="./photo/icon.svg#icon-phone"></use>
+                                        </svg>
+                                </div>
                             </div>
 
-                            <div class="container-information">
+                            <div class="form-field">
                                 <label for="mail">
-                                    <p class="modal-text">Почта</p>
-                                    <input class="modal-input-area" type="email" name="mail" id="mail" >
-                                    
-                                </label>
+                                    <span>Почта</span></label>
+                                <div class="container-svg">
+                                    <input class="modal-input-info" type="email" name="mail" id="mail">
+                                    <svg class="modal-svg" width="12" height="12">
+                                                <use href="./photo/icon.svg#icon-mail"></use>
+                                        </svg>
+                                </div>
                             </div>
 
-                            <div class="container-information">
+                            <div class="form-field">
                                 <label>
-                                    <p class="modal-text">Комментарий</p>
-                                    <textarea class="modal-input-area" name="feedback" rows="5"
-                                    placeholder="Введите текст"></textarea>
-                                </label>
+                                    <span>Комментарий</span> </label>
+                                <textarea class="modal-input-area" name="feedback" rows="6" placeholder="Введите текст"></textarea>
+
+
                             </div>
 
                             <div class="check-policy">
-                                <input class="check-policy-check" type="checkbox" name="policy" id="polici">
-                                <label for="policy"> Соглашаюсь с рассылкой и принимаю
-                                    <a href="">Условия договора</a> 
+                                <label for="checkbox">
+                                    <input type="checkbox" name="agree" class="check-policy-input .visally-hidden"/>
+                                        <div class="policy"> Соглашаюсь с рассылкой и принимаю
+                                        <a href="#">Условия договора</a>
+                                        </div>
+                                        <div class="policy-check-box">
+                                            <svg class="modal-svg-check" width="15" height="16">
+                                                <use href="./photo/icon.svg#icon-Vector-check"></use>
+                                            </svg>
+                                        </div>
                                 </label>
-                            </div>
 
-                            <button type="submit" class="modal-btn-submit">Оставить заявку</button>
+
+                            </div>
+                            <div class="modal-btn-container">
+                                <button type="submit" class="modal-btn-submit">Оставить заявку</button>
+                            </div>
                         </form>
                     </div>
 
@@ -404,10 +425,13 @@
                     <form class="" action="distribution">
                         <input class="distribution-input" type="mail" name="mail" id="distribution" placeholder="E-mail">
                     </form>
-                    <button class="footer-btn"> <span class="distribution-text-btn" >ПОДПИСАТЬСЯ</span>
-                    <svg class="distribution-svg" width="24px " height="24px ">
-                    <use href="./photo/icon.svg#icon-send "></use></svg>
-                    </button>
+                    <button class="footer-btn"> 
+                            <div class="footer-name-btn"> 
+                                <span class="distribution-text-btn" >ПОДПИСАТЬСЯ</span>
+                                <svg class="distribution-svg" width="24px " height="24px">
+                                <use href="./photo/icon.svg#icon-send "></use></svg>
+                            </div>
+                        </button>
                 </div>
 
             </div>
