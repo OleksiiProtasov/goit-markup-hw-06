@@ -362,6 +362,9 @@ body {
     outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     line-height: 12px;
+    transition-property: border-color;
+    transition-duration: var(--trans-duration);
+    transition-timing-function: var(--trasn-time-funk);
 }
 
 .modal-input-info:hover,
@@ -389,6 +392,9 @@ body {
     padding: 16px 12px;
     border-radius: 4px;
     resize: none;
+    transition-property: border-color;
+    transition-duration: var(--trans-duration);
+    transition-timing-function: var(--trasn-time-funk);
 }
 
 .modal-input-area:focus,
