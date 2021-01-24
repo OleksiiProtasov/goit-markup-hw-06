@@ -246,7 +246,7 @@ body {
 }
 
 .hero-btn {
-    background-color: #2196F3;
+    border-color: #2196F3;
     color: var(--primary-white-color);
     width: 200px;
     height: 50px;
@@ -572,12 +572,12 @@ body {
     margin-right: 30px;
 }
 
-.thumb-ourworking {
+
+/*.thumb-ourworking {
     position: relative;
-}
+}*/
 
 .thump-ourworking-p-cont {
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
