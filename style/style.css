@@ -13,7 +13,7 @@
     --trasn-time-funk: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html {
+* {
     box-sizing: border-box;
 }
 
@@ -192,7 +192,7 @@ body {
 /*  befor conect*/
 
 .icon-header {
-    padding-right: 10px;
+    margin-right: 10px;
     fill: var(--connect-color);
 }
 
@@ -697,15 +697,9 @@ body {
 
 .our-client-scn {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 94px;
     padding-bottom: 94px;
-}
-
-.our-client-box {
-    width: var(--primary-width);
-    padding-right: 15px;
-    padding-left: 15px;
 }
 
 .our-client-title {
