@@ -17,10 +17,6 @@
     box-sizing: border-box;
 }
 
-img {
-    display: block;
-}
-
 ul {
     list-style: none;
     padding-inline-start: 0;
@@ -570,11 +566,6 @@ body {
 .ourwork:not(:last-child) {
     margin-right: 30px;
 }
-
-
-/*.thumb-ourworking {
-    position: relative;
-}*/
 
 .thump-ourworking-p-cont {
     bottom: 0;
